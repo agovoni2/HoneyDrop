@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    private float movementInputDirection;
+    private float hMovement = 10.0f;
+    public float vMovement = 16.0f;
 
     private Rigidbody2D rb;
 
@@ -30,12 +31,22 @@ public class PlayerController : MonoBehaviour
 
     private void CheckInput()
     {
-        movementInputDirection = Input.GetAxisRaw("Horizontal");
+        hMovement = Input.GetAxisRaw("Horizontal");
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            Jump();
+        }
+    }
+
+    private void Jump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, vMovement);
     }
 
     private void ApplyMovement()
     {
-        rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
+        rb.velocity = new Vector2(movementSpeed * hMovement, rb.velocity.y);
     }
 
 
