@@ -10,6 +10,12 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D playerRB;
 
+    //These are for checking if the player is touching the ground
+    public Transform groundCheck;
+    public float groundCheckRadius;
+    public LayerMask groundLayer;
+    private bool isTouchingGround;
+
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
@@ -18,6 +24,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         CheckInput();
+
+        //checks if the player is touching the ground/platforms
+        isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
     }
 
     private void FixedUpdate()
@@ -29,7 +38,7 @@ public class PlayerController : MonoBehaviour
     {
         hMovement = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isTouchingGround == true)
         {
             playerRB.velocity = new Vector2(playerRB.velocity.x, vMovement);
         }
