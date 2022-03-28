@@ -4,21 +4,17 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
     private float hMovement = 10.0f;
     public float vMovement = 16.0f;
-
-    private Rigidbody2D rb;
-
     public float movementSpeed = 10.0f;
 
-    // Start is called before the first frame update
+    private Rigidbody2D playerRB;
+
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        playerRB = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         CheckInput();
@@ -35,20 +31,12 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            Jump();
+            playerRB.velocity = new Vector2(playerRB.velocity.x, vMovement);
         }
-    }
-
-    private void Jump()
-    {
-        rb.velocity = new Vector2(rb.velocity.x, vMovement);
     }
 
     private void ApplyMovement()
     {
-        rb.velocity = new Vector2(movementSpeed * hMovement, rb.velocity.y);
+        playerRB.velocity = new Vector2(movementSpeed * hMovement, playerRB.velocity.y);
     }
-
-
-
 }
