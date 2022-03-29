@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player2Controller : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private float hMovement = 10.0f;
     public float vMovement = 16.0f;
@@ -36,9 +36,9 @@ public class Player2Controller : MonoBehaviour
 
     private void CheckInput()
     {
-        hMovement = Input.GetAxisRaw("Horizontal2");
+        hMovement = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonDown("Jump2") && isTouchingGround == true)
+        if (Input.GetButtonDown("Jump") && isTouchingGround == true)
         {
             playerRB.velocity = new Vector2(playerRB.velocity.x, vMovement);
         }
