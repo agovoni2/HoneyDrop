@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8901547336945141852}
   - component: {fileID: 7823974706478427698}
   m_Layer: 31
-  m_Name: newPalette
+  m_Name: GrassTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
