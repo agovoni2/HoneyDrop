@@ -18,7 +18,7 @@ public class ButtonScript2 : MonoBehaviour
         player1 = GameObject.Find("Player1");
         player2 = GameObject.Find("Player2");
 
-        if (Other.CompareTag("Player"))
+        if (Other.CompareTag("Player") || Other.CompareTag("Player2"))
         {
             button2Pressed = true;
         }

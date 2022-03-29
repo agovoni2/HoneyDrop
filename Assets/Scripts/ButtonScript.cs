@@ -4,33 +4,34 @@ using UnityEngine;
 
 public class ButtonScript : MonoBehaviour
 {
-    [SerializeField]
-    GameObject Platform;
+    
+   public GameObject Platform;
 
     int buttonPressed = 0;
     private GameObject player1;
     private GameObject player2;
 
-    private GameObject button2Script;
-    private ButtonScript2 button2Pressed;
+    //public GameObject button2Script;
+    public ButtonScript2 button2script;
 
-    private void Start()
-    {
-        button2Pressed = button2Script.GetComponent<ButtonScript2>();
-    }
+   
 
     void OnTriggerEnter2D(Collider2D Other)
     {
         player1 = GameObject.Find("Player1");
         player2 = GameObject.Find("Player2");
 
-        Debug.Log(button2Pressed.button2Pressed);
+        Debug.Log(button2script.button2Pressed);
 
         Debug.Log(player1.transform.position);
 
-        if (Other.CompareTag("Player"))
+        if (Other.CompareTag("Player") || Other.CompareTag("Player2"))
         {
-
+            if (button2script.button2Pressed)
+            {
+               Platform.SetActive(false);
+            }
+             
         }
     }
 }
