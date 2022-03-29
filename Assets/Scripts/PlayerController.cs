@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask groundLayer;
+    public LayerMask player2Layer;
     private bool isTouchingGround;
 
     void Start()
@@ -25,8 +26,15 @@ public class PlayerController : MonoBehaviour
     {
         CheckInput();
 
-        //checks if the player is touching the ground/platforms
-        isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        //checks if the player is touching the ground/platforms or other player 2
+        if (Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer) == true | Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, player2Layer) == true)
+        {
+            isTouchingGround = true;
+        }
+        else
+            isTouchingGround = false;
+
+    //    isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
     }
 
     private void FixedUpdate()
