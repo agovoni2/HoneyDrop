@@ -391,7 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d720a6ff98530704b84091f3430f5bea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 1
+  index: 2
   levelName: level-2_baseOfTree
 --- !u!1 &447169229
 GameObject:

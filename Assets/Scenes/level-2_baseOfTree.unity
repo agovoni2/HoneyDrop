@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 136244827}
   m_Layer: 3
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: level2platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,13 +200,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136244824}
-  m_LocalRotation: {x: -0, y: -0, z: 0.005331252, w: 0.9999859}
-  m_LocalPosition: {x: -2.91, y: 4.41, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.95, y: 3.71, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.611}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &136244827
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -391,7 +391,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &600242306
 PrefabInstance:
@@ -460,6 +460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 634295316}
   - component: {fileID: 634295315}
+  - component: {fileID: 634295317}
   m_Layer: 0
   m_Name: lowerTreeButton1
   m_TagString: Untagged
@@ -526,12 +527,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 634295314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.86, y: 4.3, z: 0}
+  m_LocalPosition: {x: 7.652, y: -2.72, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &634295317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634295314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3bbbab7b6d28e4faf3f1edc5975203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Platform: {fileID: 136244824}
+  button2script: {fileID: 2004508978}
 --- !u!1 &954788265
 GameObject:
   m_ObjectHideFlags: 0
@@ -4013,6 +4028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2004508977}
   - component: {fileID: 2004508976}
+  - component: {fileID: 2004508978}
   m_Layer: 0
   m_Name: lowerTreeButton2
   m_TagString: Untagged
@@ -4079,9 +4095,22 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2004508975}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.079, y: 2.27, z: 0}
+  m_LocalPosition: {x: 11.86, y: 4.3, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2004508978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004508975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c3021891f827c448a4c366578a70a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button2Pressed: 0

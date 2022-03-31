@@ -6,9 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 02ba3d113e827c94aa5be61c55539e3a
+  - enabled: 1
     path: Assets/Scenes/level-1_cave.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/level-2_baseOfTree.unity
     guid: 8071704770763b84c973018366f9f9c9
+  - enabled: 1
+    path: Assets/Scenes/level-3_midTree.unity
+    guid: 07e0421f3a243b94588f9a72c0d4c202
+  - enabled: 1
+    path: Assets/Scenes/level-4_treeTop.unity
+    guid: bab76c0a562ac5e44b36cda94533c9d8
   m_configObjects: {}
