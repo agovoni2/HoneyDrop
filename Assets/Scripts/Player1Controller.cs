@@ -16,6 +16,9 @@ public class Player1Controller : MonoBehaviour
     public LayerMask groundLayer;
     private bool isTouchingGround;
 
+    public beeTransition beeSequence;
+    public cloudTransition cloudSequence;
+
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
@@ -23,10 +26,13 @@ public class Player1Controller : MonoBehaviour
 
     void Update()
     {
-        CheckInput();
+        if (beeSequence.restrictMovement == false || cloudSequence.restrictMovement == false)
+        {
+            CheckInput();
 
-        //checks if the player is touching the ground/platforms
-        isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+            //checks if the player is touching the ground/platforms
+            isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        }
     }
 
     private void FixedUpdate()

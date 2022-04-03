@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NextScene : MonoBehaviour
+public class hiveTransition : MonoBehaviour
 {
-    public int index;
     public string levelName;
 
     bool p1plat = false;
@@ -19,8 +18,7 @@ public class NextScene : MonoBehaviour
             p2plat = true;
         if (p1plat == true && p2plat == true)
         {
-            SceneManager.LoadScene(index);
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene("VictoryScreen");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

@@ -5,23 +5,25 @@ using UnityEngine;
 public class ButtonScript2 : MonoBehaviour
 {
     public bool button2Pressed = false;
-    private GameObject player1;
-    private GameObject player2;
+    public GameObject button2;
 
-    private void Update()
+    public Sprite buttonUp;
+    public Sprite buttonDown;
+
+    void OnTriggerStay2D(Collider2D Other)
     {
+        // Changes button sprite when player steps on the button
+        button2.GetComponent<SpriteRenderer>().sprite = buttonDown;
 
+        if (Other.CompareTag("Player1") || Other.CompareTag("Player2"))
+            button2Pressed = true;
     }
 
-    void OnTriggerEnter2D(Collider2D Other)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        player1 = GameObject.Find("Player1");
-        player2 = GameObject.Find("Player2");
+        // Changes button sprite when player steps off the button
+        button2.GetComponent<SpriteRenderer>().sprite = buttonUp;
 
-        if (Other.CompareTag("Player") || Other.CompareTag("Player2"))
-        {
-            button2Pressed = true;
-        }
-        else button2Pressed = false;
+        button2Pressed = false;
     }
 }

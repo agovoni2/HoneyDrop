@@ -5,13 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class cloudTransition : MonoBehaviour
 {
-    public int index;
     public string levelName;
+
     bool p1plat = false;
     bool p2plat = false;
+    public bool restrictMovement = false;
+
     private GameObject cloudPlat;
-    public int moveSpeed = 5;
-    public int intOther = 10;
+    public GameObject player1;
+    public GameObject player2;
+
+    public int cloudSpeed = 5;
+    public int cloudDistance = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +29,7 @@ public class cloudTransition : MonoBehaviour
     {
         if(cloudPlat.transform.position.y >= 18)
         {
+            restrictMovement = false;
             SceneManager.LoadScene("level-4_treeTop");
         }
     }
@@ -36,12 +42,20 @@ public class cloudTransition : MonoBehaviour
             p2plat = true;
         if (p1plat == true && p2plat == true)
         {
-            transform.position += transform.up * moveSpeed * intOther * Time.deltaTime;
-            cloudPlat.transform.position += transform.up * moveSpeed * intOther * Time.deltaTime;
+            transform.position += transform.up * cloudSpeed * cloudDistance * Time.deltaTime;
+            cloudPlat.transform.position += transform.up * cloudSpeed * cloudDistance * Time.deltaTime;
+
+            player1.transform.position += transform.up * cloudSpeed * cloudDistance * Time.deltaTime;
+            player2.transform.position += transform.up * cloudSpeed * cloudDistance * Time.deltaTime;
+
+            restrictMovement = true;
         }
     }
 
-
-
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        p1plat = false;
+        p2plat = false;
+    }
 
 }
