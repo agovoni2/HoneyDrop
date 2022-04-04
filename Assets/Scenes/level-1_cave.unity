@@ -243,7 +243,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 99
   m_Sprite: {fileID: -3158186192735379541, guid: fc48ac3f4ea557042bb6d7681bf436cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -284,6 +284,7 @@ MonoBehaviour:
   Platform: {fileID: 447169229}
   button1: {fileID: 278784324}
   taxiBee: {fileID: 0}
+  beeTarget: {fileID: 0}
   buttonUp: {fileID: -3158186192735379541, guid: fc48ac3f4ea557042bb6d7681bf436cd, type: 3}
   buttonDown: {fileID: 1939088938143805260, guid: fc48ac3f4ea557042bb6d7681bf436cd, type: 3}
   beeSpeed: 5
@@ -726,7 +727,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 99
   m_Sprite: {fileID: -3158186192735379541, guid: fc48ac3f4ea557042bb6d7681bf436cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -16508,7 +16509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4042439127749354973, guid: bf8a0081a02105e4cb28b61311fdfb8e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.630001
+      value: -12.13
       objectReference: {fileID: 0}
     - target: {fileID: 4042439127749354973, guid: bf8a0081a02105e4cb28b61311fdfb8e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16569,7 +16570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4564050024204401349, guid: 2ac4558779152d44586981fd97c72a10, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.514
+      value: -10.58
       objectReference: {fileID: 0}
     - target: {fileID: 4564050024204401349, guid: 2ac4558779152d44586981fd97c72a10, type: 3}
       propertyPath: m_LocalPosition.y

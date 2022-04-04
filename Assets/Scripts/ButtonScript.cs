@@ -9,6 +9,8 @@ public class ButtonScript : MonoBehaviour
     public GameObject button1;
     public GameObject taxiBee;
 
+    public Transform beeTarget;
+
     public Sprite buttonUp;
     public Sprite buttonDown;
 
@@ -35,10 +37,12 @@ public class ButtonScript : MonoBehaviour
 
     IEnumerator MoveTaxiBee()
     {
-        for (i = 0; i < 6; i++)
+  //      for (i = 0; i < 6; i++)
+        while (taxiBee.transform.position != beeTarget.position)
         {
-            taxiBee.transform.position += transform.right * beeSpeed * beeDistance * Time.deltaTime;
-            taxiBee.transform.position += -transform.up * beeSpeed * beeDistance * Time.deltaTime;
+            //taxiBee.transform.position += transform.right * beeSpeed * beeDistance * Time.deltaTime;
+            //taxiBee.transform.position += -transform.up * beeSpeed * beeDistance * Time.deltaTime;
+            taxiBee.transform.position = Vector2.MoveTowards(taxiBee.transform.position, beeTarget.position, beeDistance * Time.deltaTime);
             yield return new WaitForSeconds(0.05f);
         }
     }

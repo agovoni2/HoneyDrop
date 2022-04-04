@@ -328,6 +328,36 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4564050024204401347, guid: 2ac4558779152d44586981fd97c72a10, type: 3}
   m_PrefabInstance: {fileID: 600242306}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &416281230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 416281231}
+  m_Layer: 0
+  m_Name: beeTarget1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &416281231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416281230}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.33, y: 3.23, z: -3.8781908}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &537895087 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4042439127749354971, guid: bf8a0081a02105e4cb28b61311fdfb8e, type: 3}
@@ -543,6 +573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 537895087}
   player2: {fileID: 327176806}
+  beeTarget2: {fileID: 1324158512}
   beeSpeed: 5
   beeDistance: 5
   restrictMovement: 0
@@ -699,7 +730,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 99
   m_Sprite: {fileID: -3158186192735379541, guid: fc48ac3f4ea557042bb6d7681bf436cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -740,6 +771,7 @@ MonoBehaviour:
   Platform: {fileID: 136244824}
   button1: {fileID: 634295314}
   taxiBee: {fileID: 551798186}
+  beeTarget: {fileID: 416281231}
   buttonUp: {fileID: -3158186192735379541, guid: fc48ac3f4ea557042bb6d7681bf436cd, type: 3}
   buttonDown: {fileID: 1939088938143805260, guid: fc48ac3f4ea557042bb6d7681bf436cd, type: 3}
   beeSpeed: 5
@@ -4003,6 +4035,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1324158511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1324158512}
+  m_Layer: 0
+  m_Name: beeTarget2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1324158512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324158511}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.22, y: 18.97, z: -3.8781908}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1380613736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4091,8 +4153,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: 
   restrictMovement: 0
-  player1: {fileID: 0}
-  player2: {fileID: 0}
+  player1: {fileID: 537895087}
+  player2: {fileID: 327176806}
   cloudSpeed: 5
   cloudDistance: 10
 --- !u!4 &1796267332
@@ -4268,7 +4330,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 99
   m_Sprite: {fileID: -3158186192735379541, guid: fc48ac3f4ea557042bb6d7681bf436cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -18,13 +18,11 @@ public class cloudTransition : MonoBehaviour
     public int cloudSpeed = 5;
     public int cloudDistance = 10;
 
-    // Start is called before the first frame update
     void Start()
     {
         cloudPlat = GameObject.Find("cloudPlatform");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(cloudPlat.transform.position.y >= 18)
